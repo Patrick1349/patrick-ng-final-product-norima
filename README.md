@@ -1,1 +1,2 @@
 # patrick-ng-final-product-norima
+Have you ever struggle to find casual activities to do with your friends? University students struggle to reconnect with their friends due to lack of varieties of activity, and maybe you'll do one or two trip per year with them to reconnect and create meaningful memories. What if there is a way where everytime you visit your friends, you'll create memories that you'll cherish for a long time.  
