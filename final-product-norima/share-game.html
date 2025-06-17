@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norima - Share your game idea</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo-icon-pink.png">
+    <link rel="stylesheet" href="src/style.css">
+    <script type="module" src="src/share-game.js" defer></script>
+</head>
+<body>
+    <nav id="popout" >
+        <h3 id="username">Username</h3 >
+        <img class="profile-pic" src="assets/ic--baseline-account-circle.svg" alt="profile pic">
+        <a href="index.html">HOME</a>
+        <a href="games.html">GAMES</a>
+        <a href="#">MY GAMES</a>
+        <a href="share-game.html">SHARE</a>
+        <a href="">COMMUNITY</a>
+        <a href="#">ABOUT</a>
+    </nav>
+    <header>
+        <a href="index.html"><img src="assets/nomira-logo-3.png" alt="logo" class="logo"></a>
+        <img src="assets/ic--baseline-menu.svg" alt="hamburger-menu" id="menu">
+    </header>
+    <main>
+        <h1 class="subheading">SHARE YOUR GAME IDEA</h1>
+        <img id="boundary" src="assets/boundary-norima-pink.png" alt="boundary">
+        <section>
+            <form id="game-form">
+            <label class="form-label">Title of game</label>
+            <input class="form-content" id="form-title" type="text" name="game_title" required />
+
+            <label class="form-label" id="form-description">Description</label>
+            <textarea class="form-content" name="description" rows="5" required></textarea>
+
+            <label class="form-label">Number of players</label>
+            <div class="player-num">
+                <input class="form-content" id="form-minplay" type="number" name="player_min" min="1" required />
+            <input class="form-content" id="form-maxplay" type="number" name="player_max" min="2" required />
+            </div>
+            
+
+            <label class="form-label">Equipment</label>
+            <textarea class="form-content" id="form-equipment" name="equipment" rows="3" required></textarea>
+
+            <label class="form-label">Instruction</label>
+            <textarea class="form-content" id="form-instruction" name="instruction" rows="3" required></textarea>
+
+            <button class="button" type="submit">DONE</button>
+        </form>
+        </section>
+        <img id="background-lights" src="assets/background-lights.png" alt="background-lights">
+    </main>
+</body>
+</html>

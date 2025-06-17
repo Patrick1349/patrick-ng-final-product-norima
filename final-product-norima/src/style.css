@@ -1,0 +1,523 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --white:#ffffff;
+    --black:#000000;
+    --grey:#8b8b87;
+    --pink:#F17DA6;
+    --dark-grey:#292929;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    background-color: var(--black);
+    padding-top: 130px; 
+    margin: 0;
+}
+
+main {
+    
+    display: grid;
+    gap:51px;
+    padding:0px 14px 0px 14px;
+    max-width: 100% ;
+
+}
+
+section{
+    width: 369px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+#background-lights{
+    filter: blur(35px);
+    object-fit: cover;
+    width: 120%;
+    
+}
+
+/* HEADER */
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 14.5px;
+    transition: background-color 0.3s ease;
+}
+    
+
+.logo{
+    width: 160px;
+}
+
+#menu{
+    width: 59px;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* MENU */
+
+#popout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--pink);
+  color: white;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-pic{
+    width: 59px;
+    object-fit: contain;
+    margin-left: auto;
+
+}
+
+#popout.show {
+  transform: translateX(0);
+}
+
+/* HERO CARD */
+
+#hero{
+    display: flex;
+    justify-content: center;
+}
+
+.game-card {
+    position: relative;
+    border-radius: 24px;
+    height: 560px;
+    width: 340px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    background: none;
+    transition: transform 0.25s cubic-bezier(0.55, 0.06, 0.68, 0.19), opacity 0.45s ease;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Start: Fade and slide out in a curve */
+.fade-out {
+  opacity: 0;
+  transform: translateX(200px) translateY(50px)rotateZ(12deg);
+}
+
+/* End: Slide in from a curve path */
+.fade-in {
+  opacity: 0;
+  transform: translateX(-300px) translateY(50px)rotateZ(-12deg) ;
+}
+
+.card-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;     
+    justify-content: center;
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+.card-layer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff; 
+    
+}
+
+.card-description {
+    margin-top: 10px;
+    width: 222.86px;
+    max-height: 66px;
+    overflow: auto;
+    text-align: center;
+    scrollbar-width: none;
+  -ms-overflow-style: none;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.card-title{
+    font-size: 32px;
+    margin: 0;
+    width: 222.86px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card-players{
+    margin: 10px 0px 0px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.card-img {
+    border-radius: 24px;
+    width: 222.86px;
+}
+
+.container{
+    margin-top: 14px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+
+
+#hero-arrow{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    
+}
+
+.tool-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 7px 0px 7px;
+
+}
+
+.tool-bar img{
+    width: 59px;
+    cursor: pointer;
+}
+
+
+/* MONTHLY GAMES */
+
+#monthly-games{
+   margin-top: 80px;
+   margin-bottom: 120px;
+}
+
+.sub-game-container{
+    display: flex;
+    justify-content: center;
+}
+
+.sub-game-card {
+
+    position: relative;
+    border-radius: 24px;
+    height: 270px;
+    width: 180px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    background: none;
+    margin: 1px 1px 5px 1px;
+
+    
+}
+
+.sub-card-content {
+    
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff; 
+
+}
+
+.sub-card-img {
+    border-radius: 24px;
+    width: 140.48px;
+}
+
+.sub-card-title{
+   margin-top: 11px;
+    width: 140.48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* SHARE */
+
+#mockup{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    width: 351px;
+    margin-bottom: 28px;
+}
+
+#form-title, #form-description, #form-minplay, #form-maxplay{
+    height: 60px;
+}
+
+#form-minplay, #form-maxplay{
+    width: 95px;
+    margin-right: 10px;
+}
+
+.form-content{
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--dark-grey);
+    border: none;
+    color: var(--grey);
+    font-size: 16px;
+    padding-left: 21px;
+    margin-bottom: 33px;
+}
+
+/* MORE GAME */
+
+#arrow-tool{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+/* GAME DETAIL */
+
+#boundary{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#game-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-detail-card{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 24px;
+    height: 354px;
+    width: 305px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.card-detail-img{
+    border-radius: 24px;
+    width: 187px;
+}
+
+/* SHARE GAME */
+
+#game-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* BUTTON */
+
+.button{  
+     
+    height: 60px;
+    width: 70%;
+    text-align: right;
+    padding-right: 14px;
+    background-color: var(--pink);
+    font-size: 16px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--black);
+    margin-bottom: 265px;
+
+}
+
+#searchbar{
+    height: 60px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--dark-grey);
+    border: none;
+    color: var(--grey);
+    font-size: 16px;
+    padding-left: 21px;
+    margin-bottom: 33px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, p, label{
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 16px;
+}
+
+#popout a{
+    margin-bottom: 38px;
+    font-size: 32px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;  
+    color: var(--black);
+}
+
+#popout h3{
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+
+.container h3{
+    margin: 0;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.monthly-head{
+    margin: 0;
+    width: 328px;
+    font-size: 32px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 33px;
+}
+
+.extra{
+    width: 289px;
+    font-size: 32px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;  
+}
+
+.subheading{
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    margin-bottom: 20px;
+    width: 360px;
+}
+
+.player-count{
+    font-family: "helvetica-lt-pro",  sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;  
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.intro-detail p,.equipment p,.instruction p{
+    width: 255px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.intro-detail h2,.equipment h2,.instruction h2{
+    width: 255px;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+h1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-label{
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+/* 
+Helvetica LT Pro Light
+font-family: "helvetica-lt-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+
+Helvetica LT Pro Roman
+font-family: "helvetica-lt-pro", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Helvetica LT Pro Bold
+font-family: "helvetica-lt-pro", sans-serif;
+font-weight: 700;
+font-style: normal;
+ */

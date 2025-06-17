@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norima - Browse Games</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo-icon-pink.png">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/random-image.js" defer></script>
+    <script type="module" src="src/games.js" defer></script>
+</head>
+<body>
+    <nav id="popout" >
+        <h3 id="username">Username</h3 >
+        <img class="profile-pic" src="assets/ic--baseline-account-circle.svg" alt="profile pic">
+        <a href="index.html">HOME</a>
+        <a href="games.html">GAMES</a>
+        <a href="#">MY GAMES</a>
+        <a href="share-game.html">SHARE</a>
+        <a href="">COMMUNITY</a>
+        <a href="#">ABOUT</a>
+    </nav>
+    <header>
+        <a href="index.html"><img src="assets/nomira-logo-3.png" alt="logo" class="logo"></a>
+        <img src="assets/ic--baseline-menu.svg" alt="hamburger-menu" id="menu">
+    </header>
+    <main>
+        <h1 class="subheading">GAMES</h1>
+
+        <section id="monthly-games">
+                <h2 class="monthly-head">THIS MONTH'S GAMES</h2>
+                <div id="sub-game-container">
+                    
+                </div>
+            </section>
+
+        <section id="more-games">
+            <h2 class="monthly-head" >MORE GAMES</h2>
+            <input id="searchbar" type="text" placeholder="Search..">
+            <div id="more-game-container">
+
+            </div>
+        </section>
+        <div id="arrow-tool">
+            <img class="arrow" id="left-arrow" src="assets/left-arrow.png" alt="left-arrow">
+            <img class="arrow" id="right-arrow" src="assets/right-arrow.png" alt="right-arrow">
+        </div>
+        <img id="background-lights" src="assets/background-lights.png" alt="background-lights">
+    </main>
+</body>
+</html>

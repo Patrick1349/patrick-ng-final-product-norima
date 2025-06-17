@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Norima - Web Generator: Game ideas for you</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo-icon-pink.png">
     <link rel="stylesheet" href="src/style.css">
-    <script src="src/script.js" defer ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/mns5hbc.css">
+    <script type="module" src="src/index.js" defer ></script>
+    <script src="src/random-image.js" defer></script>
 </head>
 <body>
+    <nav id="popout" >
+        
+        <img class="profile-pic" src="assets/ic--baseline-account-circle.svg" alt="profile pic">
+        <h3 id="username">Username</h3 >
+        <a href="index.html">HOME</a>
+        <a href="games.html">GAMES</a>
+        <a href="#">MY GAMES</a>
+        <a href="share-game.html">SHARE</a>
+        <a href="">COMMUNITY</a>
+        <a href="#">ABOUT</a>
+    </nav>
     <header>
-        <img src="" alt="logo" class="logo">
-        <img src="" alt="hamburger-menu" id="menu">
+        <img src="assets/nomira-logo-3.png" alt="logo" class="logo">
+        <img src="assets/ic--baseline-menu.svg" alt="hamburger-menu" id="menu">
     </header>
     <main>
 
 
-        	<section id="hero">
-                <div class="game-card">
-                    <img src="" alt="game-img">
-                    <p>player needed</p>
-                    <h2>Game Title</h2>
-                    <p>Description</p>
+        	<section id="hero-sec">
+                <div id="hero"></div>
                 </div>
+
                 <div class="container">
                     <div class="tool-bar">
-                        <img src="" alt="love">
-                        <img src="" alt="shuffle">
+                        <img class="favorite" src="assets/ic--baseline-favorite-border.svg" alt="love">
+                        <img class="shuffle" src="assets/ic--baseline-shuffle.svg" alt="shuffle">
                     </div>
                     <h3>More Games</h3>
-                    <img src="" alt="arrow">
+                    <img id="hero-arrow" src="assets/Frame.png" alt="arrow">
                 </div>
             </section>
 
@@ -36,27 +47,29 @@
 
 
             <section id="monthly-games">
-                <h2>THIS MONTH'S GAMES</h2>
-                <div class="sub-game-card">
-                    <img src="" alt="game-img">
-                    <h4 class="game-title"></h4>
+                <h2 class="monthly-head">THIS MONTH'S GAMES</h2>
+                <div id="sub-game-container">
+                    
                 </div>
             </section>
 
 
 
             <section id="design-game">
-                <img src="" alt="mockup">
-                <h2>Design your own game!</h2>
-                <button>DESIGN GAME</button>
+                <img id="mockup" src="assets/norima-mockup.jpg" alt="mockup">
+                <h2 class="extra">Share your own game!</h2>
             </section>
+            <a href="share-game.html"><button class="button">SHARE GAME</button></a>
 
 
 
             <section id="subscribe">
-                <h2>Find more games for $1.99/month</h2>
-                <button>SUBSCRIBE</button>
+                <h2 class="extra">Find more games for $1.99/month</h2>
+                
             </section>
+            <button class="button">SUBSCRIBE</button>
+
+            <img id="background-lights" src="assets/background-lights.png" alt="background-lights">
     </main>
 </body>
 </html>
